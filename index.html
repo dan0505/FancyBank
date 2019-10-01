@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fancy Bank</title>
+<!--    <link rel="stylesheet" href="style.css">-->
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Welcome to the Fancy Bank!</h1>
+        </div>
+        <div class="row">
+            <h2>Account Management</h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="account-name">Account Name</label>
+            </div>
+            <div class="col-sm-9">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="account name..." id="account-name">
+                    <div class="input-group-append">
+                        <button class="btn btn-success" type="submit" id="add-account">Add</button>
+                    </div>
+                </div>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" id="emptyNameAlert">
+                    <strong>Warning!</strong> Account name shouldn't be empty!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="alert alert-success alert-dismissible fade show" role="alert" id="successAddAccountAlert">
+                    <strong>Successful!</strong> Account added!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Accounts</h2>
+        </div>
+        <div class="row">
+            <table id="account-list" class="table"></table>
+        </div>
+        <div class="row">
+        <h2>Deposit/Withdraw</h2>
+        </div>
+        <div class="row" id="manage-account">
+            <select id="account-select"></select>
+            <input type="text" id="input-value">
+            <button id="deposit">Deposit</button>
+            <button id="withdraw">Withdraw</button>
+        </div>
+
+    </div>
+    <script src="bank.js"></script>
+</body>
+</html>
